@@ -85,5 +85,6 @@
 		            </configuration>
                      </execution> 			    
 	    </executions> 
-   </plugins>	   
+   </plugins>
+</build>		
 </project>
