@@ -34,13 +34,13 @@
 	</dependencies>
 	<distributionManagement>
 		 <snapshotRepository>
-		    <id>jfrog</id>
-		    <url>http://18.216.87.169:8081/artifactory</url>
+		    <id>nexus</id>
+		    <url>http://13.233.125.37:8081/repository/maven-snapshots/</url>
 		 </snapshotRepository>
 		
 		<repository>
-		    <id>jfrog</id>
-		    <url>http://18.216.87.169:8081/artifactory/</url>
+		    <id>nexus</id>
+		    <url>http://13.233.125.37:8081/repository/maven-releases/</url>
 		</repository>
   	</distributionManagement>
 	
@@ -62,29 +62,5 @@
         </plugin>
     </plugins>
 </build>
-<build>
-   <plugins>
-	    <groupId>org.jfrog.buildinfo</groupId>
-	    <artifactId>artifactory-maven-plugin</artifactId>
-            <version>2.6.1</version>
-	    <inherited>false</inherited>
-	    <executions>
-		    <execution>
-			    <id>build-info</id>
-			    <goals>
-				    <goal>publish</goal>
-			    </goals>
-			    <configuration>
-				    <publisher>
-					    <contextUrl>http://18.216.87.169:8081/artifactory</contextUrl>
-					    <username>admin</username>
-					    <password>Raagavi@123</password>
-					    <repoKey>libs-release-local</repoKey>
-					    <snapshotRepoKey>libs-snapshot-local</snapshotRepoKey>
-				    </publisher>	    
-		            </configuration>
-                     </execution> 			    
-	    </executions> 
-   </plugins>
-</build>		
+	
 </project>
